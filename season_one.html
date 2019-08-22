@@ -1,0 +1,219 @@
+<!-- Please don't look at my code, this is not a master piece -->
+<!-- Powered by Bootstrap -->
+<html>
+<head>
+	<title>Awoooooo F1 Championship - Season 1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/e13d1ed3b8.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="css/flag.css" rel="stylesheet">
+	<script>
+	function changeTable() {
+		var points = document.getElementById("points");
+		var teams = document.getElementById("teams");
+		var button = document.getElementById("button");
+		if(points.className == "d-none") {
+			points.className = "table table-dark table-hover";
+			teams.className = "d-none";
+			button.value = "Change to Team View";
+		} else if(teams.className == "d-none") {
+			teams.className = "table table-dark table-hover";
+			points.className = "d-none";
+			button.value = "Change to Point View";
+		}
+	}
+	</script>
+	<style type="text/css">
+	body {
+		background-image: url("img/background.jpg");
+	}
+	.team-img {
+		width: 150px;
+		height: 60px;
+	}
+	</style>
+	<meta property="og:title" content="Awoooooo F1 Championship - Season 1" />
+	<meta property="og:url" content="https://f1.janesthomas.ch/season_one.html" />
+	<meta property="og:image" content="https://f1.janesthomas.ch/img/preview.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="The results of Season 1." />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Awoooooo F1 Championship</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Current Season</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Past Seasons<span class="sr-only">(current)</span></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="season_three.html">Season 3</a>
+            <a class="dropdown-item" href="season_two.html">Season 2</a>
+            <a class="dropdown-item active" href="season_one.html">Season 1<span class="sr-only">(current)</span></a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rules.html">Rules</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<p>
+  <h2 class="text-white">Season 1 <small class="text-muted">Winner: Alasdair <!--i class="fas fa-info-circle"></i--></small></h2>
+	<input id="button" class="btn btn-primary" type="button" value="Change to Team View" onclick="changeTable()"/>
+	<table id="points" class="table table-dark table-hover">
+		<thead>
+			<th scope="col">#</th>
+			<th scope="col">Alasdair</th>
+			<th scope="col">Szabo</th>
+			<th scope="col">Janes</th>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Austria <i class="at flag" /></th>
+				<td>2</td>
+				<td>3</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<th scope="row">Brazil <i class="br flag" /></th>
+				<td>2</td>
+				<td>1</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th scope="row">China <i class="cn flag" /></th>
+				<td>3</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<th scope="row">Italy <i class="it flag" /></th>
+				<td>3</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<th scope="row">Australia <i class="au flag" /></th>
+				<td>2</td>
+				<td>1</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th scope="row">Belgium <i class="be flag" /></th>
+				<td>3</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<th scope="row">Canada <i class="ca flag" /></th>
+				<td>3</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<th scope="row">Japan <i class="jp flag" /></th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th scope="row">Monaco <i class="mc flag" /></th>
+				<td>3</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<th scope="row">Germany <i class="de flag" /></th>
+				<td>3</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<th scope="row" class="bg-primary">Total</th>
+				<td class="bg-primary">25</td>
+				<td class="bg-primary">16</td>
+				<td class="bg-primary">19</td>
+			</tr>
+		</tbody>
+	</table>
+	<table id="teams" class="d-none">
+		<thead>
+			<th scope="col">#</th>
+			<th class="text-center" scope="col">Alasdair</th>
+			<th class="text-center" scope="col">Szabo</th>
+			<th class="text-center" scope="col">Janes</th>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Austria <i class="at flag" /></th>
+				<td class="text-center"><img src="img/renault.jpg" class="team-img" alt="Renault"></td>
+				<td class="text-center"><img src="img/renault.jpg" class="team-img" alt="Renault"></td>
+				<td class="text-center"><img src="img/mercedes.jpg" class="team-img" alt="Mercedes"></td>
+			</tr>
+			<tr>
+				<th scope="row">Brazil <i class="br flag" /></th>
+				<td class="text-center"><img src="img/mclaren.jpg" class="team-img" alt="McLaren"></td>
+				<td class="text-center"><img src="img/redbull.jpg" class="team-img" alt="Red Bull"></td>
+				<td class="text-center"><img src="img/tororosso.jpg" class="team-img" alt="Toro Rosso"></td>
+			</tr>
+			<tr>
+				<th scope="row">China <i class="cn flag" /></th>
+				<td class="text-center"><img src="img/williams.jpg" class="team-img" alt="Williams"></td>
+				<td class="text-center"><img src="img/haas.jpg" class="team-img" alt="Haas"></td>
+				<td class="text-center"><img src="img/haas.jpg" class="team-img" alt="Haas"></td>
+			</tr>
+			<tr>
+				<th scope="row">Italy <i class="it flag" /></th>
+				<td class="text-center"><img src="img/forceindia.jpg" class="team-img" alt="Force India"></td>
+				<td class="text-center"><img src="img/mercedes.jpg" class="team-img" alt="Mercedes"></td>
+				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
+			</tr>
+			<tr>
+				<th scope="row">Australia <i class="au flag" /></th>
+				<td class="text-center"><img src="img/sauber.jpg" class="team-img" alt="Sauber"></td>
+				<td class="text-center"><img src="img/sauber.jpg" class="team-img" alt="Sauber"></td>
+				<td class="text-center"><img src="img/mclaren.jpg" class="team-img" alt="McLaren"></td>
+			</tr>
+			<tr>
+				<th scope="row">Belgium <i class="be flag" /></th>
+				<td class="text-center"><img src="img/mercedes.jpg" class="team-img" alt="Mercedes"></td>
+				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
+				<td class="text-center"><img src="img/renault.jpg" class="team-img" alt="Renault"></td>
+			</tr>
+			<tr>
+				<th scope="row">Canada <i class="ca flag" /></th>
+				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
+				<td class="text-center"><img src="img/mclaren.jpg" class="team-img" alt="McLaren"></td>
+				<td class="text-center"><img src="img/williams.jpg" class="team-img" alt="Williams"></td>
+			</tr>
+			<tr>
+				<th scope="row">Japan <i class="jp flag" /></th>
+				<td class="text-center"><img src="img/haas.jpg" class="team-img" alt="Haas"></td>
+				<td class="text-center"><img src="img/tororosso.jpg" class="team-img" alt="Toro Rosso"></td>
+				<td class="text-center"><img src="img/redbull.jpg" class="team-img" alt="Red Bull"></td>
+			</tr>
+			<tr>
+				<th scope="row">Monaco <i class="mc flag" /></th>
+				<td class="text-center"><img src="img/redbull.jpg" class="team-img" alt="Red Bull"></td>
+				<td class="text-center"><img src="img/williams.jpg" class="team-img" alt="Williams"></td>
+				<td class="text-center"><img src="img/forceindia.jpg" class="team-img" alt="Force India"></td>
+			</tr>
+			<tr>
+				<th scope="row">Germany <i class="de flag" /></th>
+				<td class="text-center"><img src="img/tororosso.jpg" class="team-img" alt="Toro Rosso"></td>
+				<td class="text-center"><img src="img/forceindia.jpg" class="team-img" alt="Force India"></td>
+				<td class="text-center"><img src="img/sauber.jpg" class="team-img" alt="Sauber"></td>
+			</tr>
+		</tbody>
+	</table>
+  </p>
+</body>
+</html>

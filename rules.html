@@ -1,0 +1,114 @@
+<!-- Please don't look at my code, this is not a master piece -->
+<!-- Powered by Bootstrap -->
+<html>
+<head>
+	<title>Awoooooo F1 Championship - Season 1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/e13d1ed3b8.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="css/flag.css" rel="stylesheet">
+	<script>
+	function changeTable() {
+		var points = document.getElementById("points");
+		var teams = document.getElementById("teams");
+		var button = document.getElementById("button");
+		if(points.className == "d-none") {
+			points.className = "table table-dark table-hover";
+			teams.className = "d-none";
+			button.value = "Change to Team View";
+		} else if(teams.className == "d-none") {
+			teams.className = "table table-dark table-hover";
+			points.className = "d-none";
+			button.value = "Change to Point View";
+		}
+	}
+	</script>
+	<style type="text/css">
+	body {
+		background-image: url("img/background.jpg");
+	}
+	.team-img {
+		width: 150px;
+		height: 60px;
+	}
+	</style>
+	<meta property="og:title" content="Awoooooo F1 Championship - Rules" />
+	<meta property="og:url" content="https://f1.janesthomas.ch/rules.html" />
+	<meta property="og:image" content="https://f1.janesthomas.ch/img/preview.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="The rules of the game." />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Awoooooo F1 Championship</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Current Season</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Past Seasons</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="season_three.html">Season 3</a>
+            <a class="dropdown-item" href="season_two.html">Season 2</a>
+            <a class="dropdown-item" href="season_one.html">Season 1</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="rules.html">Rules<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<p>
+	<div class="text-light">
+		<h2 class="text-white">Season 4</h2>
+		<h3 class="text-white">Track Choice</h3>
+		<p>
+			11 Tracks - 5 random picks then 1 each in reverse championship order:
+			<ul>
+				<li>Brian</li>
+				<li>Valerii</li>
+				<li>Szabo</li>
+				<li>Juan</li>
+				<li>Janes</li>
+				<li>Alasdair</li>
+			</ul>
+		</p>
+		<h3 class="text-white">Points</h3>
+		<p>
+			<ul>
+				<li>1st - 5</li>
+				<li>2nd - 4</li>
+				<li>3rd - 3</li>
+				<li>4th - 2</li>
+				<li>5th - 1</li>
+				<li>6th - 0</li>
+				<li>F/L - 1</li>
+			</ul>
+		</p>
+		<h3 class="text-white">Success Bias - cumulative bias</h3>
+		<p>
+			<ul>
+				<li>1 win - Williams pick next</li>
+				<li>2 win - Lose track pick - pick goes to last placed in championship at end of race</li>
+				<li>3+ win - Lose Tier 1 team</li>
+			</ul>
+		</p>
+		<h3 class="text-white">Team Choice / Picks+-</h3>
+		<p>
+			<ul>
+				<li>Tier 1 - Red Bull , Mercedes , Ferrari /4-</li>
+				<li>Tier 2 - Haas , Toro Rosso , Force India , Renault , Mclaren , Sauber /6</li>
+				<li>Tier 3 - Williams /1+</li>
+			</ul>
+		</p>
+	</div>
+</p>
+</body>
+</html>

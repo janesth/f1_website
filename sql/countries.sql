@@ -1,0 +1,23 @@
+INSERT INTO countries(name, tag)
+VALUES
+("Australia","au"),
+("Bahrain","bh"),
+("China","cn"),
+("Azerbaijan","az"),
+("Spain","es"),
+("Monaco","mc"),
+("Canada","ca"),
+("France","fr"),
+("Austria","at"),
+("Britain","uk"),
+("Germany","de"),
+("Hungary","hu"),
+("Belgium","ne"),
+("Italy","it"),
+("Singagore","sg"),
+("Russia","ru"),
+("Japan","jp"),
+("United States","us"),
+("Mexico","mx"),
+("Brazil","br"),
+("Abu Dhabi","ae");
