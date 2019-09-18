@@ -8,4 +8,5 @@ VALUES
 ("Renault","ren"),
 ("McLaren","mcl"),
 ("Sauber","sau"),
-("Williams","wil");
+("Williams","wil"),
+("Haas", "haa");
