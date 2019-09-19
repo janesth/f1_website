@@ -24,6 +24,20 @@
 			button.value = "Change to Point View";
 		}
 	}
+	function loadTable() {
+		if (window.XMLHttpRequest) {
+						xmlhttp = new XMLHttpRequest();
+				} else {
+						xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange = function() {
+						if (this.readyState == 4 && this.status == 200) {
+								document.getElementById("tablePlaceholder").innerHTML = this.responseText;
+						}
+				};
+				xmlhttp.open("GET","table.php?season=4",true);
+				xmlhttp.send();
+	}
 	</script>
 	<style type="text/css">
 	body {
@@ -40,7 +54,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="The current standings of the Awoooooo F1 Championship" />
 </head>
-<body>
+<body onload="loadTable()">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		  <a class="navbar-brand" href="index.html">Awoooooo F1 Championship</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,239 +82,7 @@
 <p>
 	<h2 class="text-white">Season 4</h2>
 	<input id="button" class="btn btn-primary" type="button" value="Change to Team View" onclick="changeTable()"/>
-	<table id="points" class="table table-dark table-hover">
-		<thead>
-			<th scope="col">#</th>
-			<th scope="col">Alasdair</th>
-			<th scope="col">Juan</th>
-			<th scope="col">Janes</th>
-			<th scope="col">Szabo</th>
-			<th scope="col">Valerii</th>
-			<th scope="col">Brian</th>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">Canada <i class="ca flag" /></th>
-				<td>2</td>
-				<td>3 (FL+1)</td>
-				<td>1</td>
-				<td>4</td>
-				<td>OUT</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<th scope="row">Italy <i class="it flag" /></th>
-				<td>3 (FL+1)</td>
-				<td>2</td>
-				<td>4</td>
-				<td>1</td>
-				<td>OUT</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td>OUT</td>
-				<td>OUT</td>
-			</tr>
-			<tr>
-				<th scope="row" class="bg-primary">Total</th>
-				<td class="bg-primary">6</td>
-				<td class="bg-primary">6</td>
-				<td class="bg-primary">5</td>
-				<td class="bg-primary">5</td>
-				<td class="bg-primary">OUT</td>
-				<td class="bg-primary">0</td>
-			</tr>
-		</tbody>
-	</table>
-	<table id="teams" class="d-none">
-		<thead>
-			<th scope="col">#</th>
-			<th class="text-center" scope="col">Alasdair</th>
-			<th class="text-center" scope="col">Juan</th>
-			<th class="text-center" scope="col">Janes</th>
-			<th class="text-center" scope="col">Szabo</th>
-			<th class="text-center" scope="col">Valerii</th>
-			<th class="text-center" scope="col">Brian</th>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">Canada <i class="ca flag" /></th>
-				<td class="text-center"><img src="img/mercedes.jpg" class="team-img" alt="Mercedes"></td>
-				<td class="text-center"><img src="img/mercedes.jpg" class="team-img" alt="Mercedes"></td>
-				<td class="text-center"><img src="img/tororosso.jpg" class="team-img" alt="Toro Rosso"></td>
-				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
-				<td class="text-center"><img src="img/tororosso.jpg" class="team-img" alt="Toro Rosso"></td>
-				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
-			</tr>
-			<tr>
-				<th scope="row">Italy <i class="it flag" /></th>
-				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
-				<td class="text-center"><img src="img/sauber.jpg" class="team-img" alt="Sauber"></td>
-				<td class="text-center"><img src="img/mercedes.jpg" class="team-img" alt="Mercedes"></td>
-				<td class="text-center"><img src="img/williams.jpg" class="team-img" alt="Williams"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/ferrari.jpg" class="team-img" alt="Ferrari"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-			<tr>
-				<th scope="row"></th>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-				<td class="text-center"><img src="img/out.jpg" class="team-img" alt="Disqualified"></td>
-			</tr>
-		</tbody>
-	</table>
+	<div id="tablePlaceholder"><b class="text-white">Loading Data...</b></div>
 </p>
 </body>
 </html>
