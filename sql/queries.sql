@@ -11,4 +11,5 @@ from
 races
 left join drivers on races.driver_id = drivers.driver_id
 left join countries on races.country_id = countries.country_id
-left join teams on races.team_id = teams.team_id;
+left join teams on races.team_id = teams.team_id
+where season_id = 1;

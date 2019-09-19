@@ -24,6 +24,22 @@
 			button.value = "Change to Point View";
 		}
 	}
+	function loadTable() {
+		if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("testTableSql").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","table.php?q=1",true);
+        xmlhttp.send();
+	}
 	</script>
 	<style type="text/css">
 	body {
@@ -40,7 +56,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="The results of Season 1." />
 </head>
-<body>
+<body onload="loadTable()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Awoooooo F1 Championship</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +84,7 @@
 <p>
   <h2 class="text-white">Season 1 <small class="text-muted">Winner: Alasdair <!--i class="fas fa-info-circle"></i--></small></h2>
 	<input id="button" class="btn btn-primary" type="button" value="Change to Team View" onclick="changeTable()"/>
-	<table id="points" class="table table-dark table-hover">
+	<!--table id="points" class="table table-dark table-hover">
 		<thead>
 			<th scope="col">#</th>
 			<th scope="col">Alasdair</th>
@@ -213,7 +229,8 @@
 				<td class="text-center"><img src="img/sauber.jpg" class="team-img" alt="Sauber"></td>
 			</tr>
 		</tbody>
-	</table>
+	</table-->
+	<div id="testTableSql"><b>Data will be displayed here</b></div>
   </p>
 </body>
 </html>
