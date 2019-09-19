@@ -18,7 +18,7 @@ th {text-align: left;}
 <body>
 
 <?php
-$q = intval($_GET['q']);
+$season = intval($_GET['season']);
 
 $con = mysqli_connect('XYZ','XYZ','XYZ','XYZ');
 if (!$con) {
@@ -26,8 +26,8 @@ if (!$con) {
 }
 
 mysqli_select_db($con,"thomasj2_fone");
-$sqlDrivers="SELECT drivers.name AS 'Name' FROM races LEFT JOIN drivers ON races.driver_id = drivers.driver_id WHERE season_id =".$q." GROUP BY drivers.name";
-$sqlCountries="SELECT countries.name AS 'Country', countries.tag AS 'Tag' FROM races LEFT JOIN countries ON races.country_id = countries.country_id WHERE season_id =".$q." GROUP BY countries.name";
+$sqlDrivers="SELECT drivers.name AS 'Name', drivers.driver_id AS 'ID' FROM races LEFT JOIN drivers ON races.driver_id = drivers.driver_id WHERE season_id =".$season." GROUP BY drivers.name ORDER BY races.race_id";
+$sqlCountries="SELECT countries.name AS 'Country', countries.tag AS 'Tag', races.country_id AS 'ID' FROM races LEFT JOIN countries ON races.country_id = countries.country_id WHERE season_id =".$season." GROUP BY countries.name ORDER BY races.race_id";
 $resultDrivers = mysqli_query($con,$sqlDrivers);
 $resultCountries = mysqli_query($con,$sqlCountries);
 echo "<table id='points' class='table table-dark table-hover'> <thead> <th scope='col'>#</th>";
@@ -38,29 +38,25 @@ echo "</thead><tbody>";
 while($rowCountries = mysqli_fetch_array($resultCountries)) {
   echo "<tr>";
   echo "<th scope='row'>" . $rowCountries['Country'] . " <i class='" . $rowCountries['Tag'] . " flag' /></th>";
+  $sqlPoints="SELECT points AS 'Points' FROM races WHERE season_id=".$season." AND country_id=" . $rowCountries['ID'] . " ORDER BY races.race_id";
+  $resultPoints = mysqli_query($con,$sqlPoints);
+  while($rowPoints = mysqli_fetch_array($resultPoints)) {
+    echo "<td>" . $rowPoints['Points'] . "</td>";
+  }
   echo "</tr>";
 }
-echo "</tbody></table>";
-
-/*
-
-$sql="SELECT drivers.name AS 'Name', countries.name AS 'Country', countries.tag AS 'Tag', teams.name, points AS 'Point' FROM races LEFT JOIN drivers ON races.driver_id = drivers.driver_id LEFT JOIN countries ON races.country_id = countries.country_id LEFT JOIN teams ON races.team_id = teams.team_id WHERE season_id =".$q;
-$result = mysqli_query($con,$sql);
-$rowCount = mysqli_num_rows($result);
-$row = mysqli_fetch_array($result);
-$x = 0;
-while($x <= $rowCount) {
-  echo "<tr>";
-  echo "<th scope='row'>" . $row[$x] . " <i class='" . $row[$x] . " flag' /></th>";
-  echo "<td>" . $row[$x] . "</td>";
-  $x = $x + 1;
-  echo "<td>" . $row[$x] . "</td>";
-  $x = $x + 1;
-  echo "<td>" . $row[$x] . "</td>";
-  echo "</tr>";
+echo "</tbody>";
+echo "<tr><th scope='row' class='bg-primary'>Total</th>";
+$resultDrivers = mysqli_query($con,$sqlDrivers);
+while($rowDrivers = mysqli_fetch_array($resultDrivers)) {
+  $sqlTotalPoints="SELECT SUM(races.points) AS 'Total' FROM races WHERE races.driver_id=" . $rowDrivers['ID'] . " AND races.season_id=".$season;
+  $resultPoints = mysqli_query($con,$sqlTotalPoints);
+  while($rowPoints = mysqli_fetch_array($resultPoints)) {
+    echo "<td class='bg-primary'>" . $rowPoints['Total'] . "</td>";
+  }
 }
+echo "</tr>";
 echo "</table>";
-mysqli_close($con); */
 ?>
 </body>
 </html>

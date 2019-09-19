@@ -12,7 +12,7 @@ VALUES
 ("Britain","uk"),
 ("Germany","de"),
 ("Hungary","hu"),
-("Belgium","ne"),
+("Belgium","be"),
 ("Italy","it"),
 ("Singagore","sg"),
 ("Russia","ru"),
