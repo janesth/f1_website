@@ -11,7 +11,7 @@
     </style
   </head>
 <body>
-  <?php  
+  <?php
   $season = intval($_GET['season']);
   $con = mysqli_connect('XYZ','XYZ','XYZ','XYZ');
   if (!$con) {

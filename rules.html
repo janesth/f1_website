@@ -6,34 +6,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/e13d1ed3b8.js"></script>
+	<script src="js/scripts.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 	<link href="css/flag.css" rel="stylesheet">
-	<script>
-	function changeTable() {
-		var points = document.getElementById("points");
-		var teams = document.getElementById("teams");
-		var button = document.getElementById("button");
-		if(points.className == "d-none") {
-			points.className = "table table-dark table-hover";
-			teams.className = "d-none";
-			button.value = "Change to Team View";
-		} else if(teams.className == "d-none") {
-			teams.className = "table table-dark table-hover";
-			points.className = "d-none";
-			button.value = "Change to Point View";
-		}
-	}
-	</script>
-	<style type="text/css">
-	body {
-		background-image: url("img/background.jpg");
-	}
-	.team-img {
-		width: 150px;
-		height: 60px;
-	}
-	</style>
+	<link href="css/style.css" rel="stylesheet">
 	<meta property="og:title" content="Awoooooo F1 Championship - Rules" />
 	<meta property="og:url" content="https://f1.janesthomas.ch/rules.html" />
 	<meta property="og:image" content="https://f1.janesthomas.ch/img/preview.png" />

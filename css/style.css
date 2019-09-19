@@ -1,0 +1,7 @@
+body {
+  background-image: url("../img/background.jpg");
+}
+.team-img {
+  width: 150px;
+  height: 60px;
+}
