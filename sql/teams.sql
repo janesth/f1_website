@@ -9,4 +9,5 @@ VALUES
 ("McLaren","mcl"),
 ("Sauber","sau"),
 ("Williams","wil"),
-("Haas", "haa");
+("Haas", "haa"),
+("Disqualified", "out");
